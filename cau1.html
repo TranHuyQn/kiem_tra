@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra snt</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    let inputNumber = parseInt((prompt('nhap 1 so nguyen')));
+    document.write(isPrime(inputNumber));
+</script>
+</body>
+</html>

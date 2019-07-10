@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau3</title>
+</head>
+<body>
+<script>
+    function sumDiagonal(mangHaiChieu) {
+        let result = 0;
+        for (let i = 0; i < mangHaiChieu.length; i++) {
+            result += mangHaiChieu[i][i];
+        }
+        return result;
+    }
+
+    let viDu = [[1, 2, 3],
+               [3, 4, 5],
+               [6, 7, 8]];
+
+    let sum = sumDiagonal(viDu);
+    document.write(sum);
+
+</script>
+</body>
+</html>

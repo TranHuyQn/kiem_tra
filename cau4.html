@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau4</title>
+</head>
+<body>
+<script>
+    function daoNguoc(mangNguon) {
+        let first = 0;
+        let last = mangNguon.length - 1;
+        while (first < last) {
+            let b = mangNguon[first];
+            mangNguon[first] = mangNguon[last];
+            mangNguon[last] = b;
+            first++;
+            last--;
+        }
+    }
+
+    function createArray(mangHaiChieu) {
+        let mangMotChieu = [];
+        for (let i = 0; i < mangHaiChieu.length; i++) {
+            if (i % 2 != 0) {
+                daoNguoc(mangHaiChieu[i]);
+            }
+            for (let j = 0; j < mangHaiChieu[i].length; j++) {
+                mangMotChieu.push(mangHaiChieu[i][j]);
+            }
+        }
+        return mangMotChieu;
+    }
+
+    let viDu = [[1, 2],
+        [3, 4]];
+
+    let result = createArray(viDu);
+    document.write(result);
+
+</script>
+</body>
+</html>
